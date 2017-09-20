@@ -20,14 +20,61 @@
               
               document.getElementById("equation").innerHTML = x +" plus " + y + " equals " + answer + "!";
           }  
+             
+              function subtractNumbers() {
+              var x;
+              var y;
+              var answer;
+              
+              x = 25;
+              alert(x);
+              y = 5;
+              alert(y);
+              answer = x - y;
+              alert(answer);
+              
+              document.getElementById("equation").innerHTML = x +" subtract " + y + " equals " + answer + "!";
+          }  
+                function multiplyNumbers() {
+              var x;
+              var y;
+              var answer;
+              
+              x = 4;
+              alert(x);
+              y = 4;
+              alert(y);
+              answer = x * y;
+              alert(answer);
+              
+              document.getElementById("equation").innerHTML = x +" multiply " + y + " equals " + answer + "!";
+          }
+             
+                function divideNumbers() {
+              var x;
+              var y;
+              var answer;
+              
+              x = 90;
+              alert(x);
+              y = 5;
+              alert(y);
+              answer = x / y;
+              alert(answer);
+              
+              document.getElementById("equation").innerHTML = x +" divide " + y + " equals " + answer + "!";
+          }
         </script>
     
         <p id="equation"></p>
     
     <form name="calculator" action="#" method="get">
-        <p> <input type="button" id="add" name="add" value="add" onclick="addNumbers();"> </p>
+        <p> <input type="button" id="add" name="add" value="add" onclick="addNumbers();">
+        <input type="button" id="subtract" name="subtract" value="subtract" onclick="subtractNumbers();"> 
+        <input type="button" id="multiply" name="multiplu" value="multiply" onclick="multiplyNumbers();">
+        <input type="button" id="divide" name="divide" value="divide" onclick="divideNumbers();"></p>
 </form>
-       
+         
     
     </body>
 
