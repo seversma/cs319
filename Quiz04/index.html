@@ -10,15 +10,16 @@
                 
                  var Animal;
             
-            Animal = document.quiz.animal.value;
+            Animal = document.getElementById("animals").value;
             alert(Animal);
+                
             
             
             }
             
         </script>
     <form name="quiz" id="favoriteAnimal" action="#" method="get"> 
-        <p> What is Your Favorite Animal? <input type="text" name="animal">
+        <p> What is Your Favorite Animal? <input type="text" name="animal" id="animals">
         </p>
          
         <input type="button" name="go" value="Go!" onclick="Showvalues();">
