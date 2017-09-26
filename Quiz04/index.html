@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms By Name</title>
+<meta charset="utf-8"
+</head>
+    <body>
+        <script>
+            function Showvalues(){
+                
+                 var Animal;
+            
+            Animal = document.quiz.animal.value;
+            alert(Animal);
+            
+            
+            }
+            
+        </script>
+    <form name="quiz" id="favoriteAnimal" action="#" method="get"> 
+        <p> What is Your Favorite Animal? <input type="text" name="animal">
+        </p>
+         
+        <input type="button" name="go" value="Go!" onclick="Showvalues();">
+        
+        </form>
+      
+    
+    
+    
+    
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
