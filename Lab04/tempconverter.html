@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Temp Converter</title>
+</head>
+    <body>
+<script>
+   
+      function conversion (){
+          
+          var fahrenheit = parseFloat (document.getElementById("F").value);
+          var celsius = (fahrenheit - 32) * (5/9);
+          document.getElementById("C").value = celsius;
+          document.temp.F.style.backgroundColor = "blue";
+          document.temp.C.backgroundColor = "gold";
+          
+      }
+    
+    function conversion2 () {
+        var celsius = parseFloat (document.getElementById("C").value);
+        var fahrenheit = (celsius * 9/5) + 32;
+        document.getElementById("F").value = fahrenheit;
+        document.temp.F.style.backgroundColor = "blue";
+        document.temp.C.style.backgroundColor = "gold";
+        
+        
+    }
+    
+    
+</script>
+  <form name="temp" id="temp" action="#" method="get">
+    
+    <h1>Temperature Converter</h1>
+      <p>Temperature in Fahrenheit:
+      <br><input type="number" name="F" id="F"></p>
+
+    
+    <p>
+      <input type="button" name="go" id="go" value="F to C" onclick="conversion();">
+      <input type="button" name="go2" id="go2" value="C to F" onclick="conversion2();">
+    </p>
+      
+      <p>Temperature in Celsius:
+      <br><input type="number" name="C" id="C"> </p>
+    
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
