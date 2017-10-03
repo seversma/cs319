@@ -9,14 +9,34 @@
     
         <script>
          function check() {
+             
              var name = document.exercise4.name.value;
              var number = document.exercise4.number.value;
              var color = document.exercise4.color.value;
              var animal = document.exercise4.animal.value;
            
-     
-          document.getElementById("words").innerHTML = name + " has " + number + " large " + color + "  " + animal + "!" ;   
+            name = name.trim();
+             number = number.trim();
+             color = color.trim();
+             animal = animal.trim();
              
+              document.getElementById("words").innerHTML = name + " has " + number + " large " + color + "  " + animal + "!" ;   
+             
+             if (name == "") {
+                 alert("Pleaae enter your name.");
+                  document.exercise4.name.focus();
+                 return false;
+             } else if (number == "") {
+                 return false;
+             } else if (color == "") {
+                 return false; {
+                     else if (animal == "")
+                 }
+                 
+                 return true;
+             }
+             
+  
              
              
          }
@@ -41,7 +61,8 @@
            Animal (plural):
             <br> 
     <select name="animal">
-           <option value="Turtles"> Turtles </option>
+           <option value=""></option>
+        <option value="Turtles"> Turtles </option>
            <option value="Dogs"> Dogs </option>
            <option value = "Birds"> Birds </option>
             <option value="Cats"> Cats </option>
@@ -54,11 +75,11 @@
             
     <input type="submit" name="go" id="go" value="Tell Story!">
             
-        </p>
+        </p><p id="words"></p>
         
         </form>
         <hr>
-         <p id="words"></p>
+         
         
         
         
