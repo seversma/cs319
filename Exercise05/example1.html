@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise 04</title>
+    <meta charset ="utf-8">
+</head>
+
+    <body>
+    
+        <script>
+         function check() {
+             var name = document.exercise4.name.value;
+             var number = document.exercise4.number.value;
+             var color = document.exercise4.color.value;
+             var animal = document.exercise4.animal.value;
+           
+     
+          document.getElementById("words").innerHTML = name + " has " + number + " large " + color + "  " + animal + "!" ;   
+             
+             
+             
+         }
+        
+        
+        </script>
+        
+        
+        <form name="exercise4" id="exercise" action="http://yoda.cs.uwec.edu/cs319/students/seversma/echo.php" method="get" onsubmit="return check();">
+         
+           <p>Name:<input type="text" name="name" id="name"></p>  
+            
+        <p>Number:<input type="number" name="number" id="number"></p>
+            
+            <p>Color:<br><input type ="radio" name="color" id="red" value="Red"> Red
+            <br><input type ="radio" name="color" id="blue" value="Blue"> Blue 
+            <br><input type ="radio" name="color" id="orange" value="Orange"> Orange
+            <br><input type ="radio" name="color" id="yellow" value="Yellow"> Yellow
+            </p>
+            
+       <p>
+           Animal (plural):
+            <br> 
+    <select name="animal">
+           <option value="Turtles"> Turtles </option>
+           <option value="Dogs"> Dogs </option>
+           <option value = "Birds"> Birds </option>
+            <option value="Cats"> Cats </option>
+            <option value="Frogs"> Frogs </option>
+           
+           </select> 
+       </p>
+        
+        <p>
+            
+    <input type="submit" name="go" id="go" value="Tell Story!">
+            
+        </p>
+        
+        </form>
+        <hr>
+         <p id="words"></p>
+        
+        
+        
+    
+    </body>
+
+
+
+
+
+
+</html>
+
