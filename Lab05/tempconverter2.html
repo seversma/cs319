@@ -3,9 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>Temp Converter</title>
-</head>
-    <body>
-<script>
+
+    <script>
    
     function tempConvert() {
         //alert("please enter a number");
@@ -15,6 +14,7 @@
          document.getElementById("C").value = celsius;
          document.temp.F.style.backgroundColor = "blue";
          document.temp.C.backgroundColor = "gold";
+        return false;
           
      
         var celsius2 = parseFloat (document.getElementById("C").value);
@@ -22,7 +22,7 @@
         document.getElementById("F").value = fahrenheit2;
         document.temp.F.style.backgroundColor = "blue";
         document.temp.C.style.backgroundColor = "gold";
-        
+        return false;
             
      if (document.getElementById("go1").checked == true); {
          
@@ -36,6 +36,14 @@
     
     
 </script>
+    
+    
+    
+    
+    
+    </head>
+    <body>
+
   <form name="temp" id="temp" action="#" method="get">
     
     <h1>Temperature Converter</h1>
