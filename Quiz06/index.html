@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Quiz 06</title>
+    <meta charset="utf8">
+</head>
+    <body>
+    
+    
+    
+<script>
+    function favcolor(){
+        
+        var color = document.getElementById("color");
+        
+        if (color.value.trim() == "") {
+            alert ("Please enter your favorite color");
+            color.focus();
+            return false;
+       
+        } else if (isNaN(color.value.trim()) == true) {
+            alert ("This is invalid.");
+            color.select();
+            return false;
+        } 
+        
+        
+    }
+    
+    
+</script>
+    <form name="quiz6" id="quiz6" action="#" method="get">
+    <p>What is your Favorite Color? <input type="text" name="color" id="color"></p>
+        
+       <input type="submit" name="submit" id="submit" value="submit" onsubmit="return favcolor();"> 
+    </form>
+    
+    </body>
+
+
+
+
+
+</html>
