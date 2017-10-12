@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Guess the Number</title>
+    <meta charset ="utf-8">
+</head>
+
+<body>
+    <script>
+        
+        function yourguess(){
+          
+            var number = document.guessnumber.number.value;
+            
+            
+            
+        if (number == "") {
+            alert ("Please Insert a Number");
+            document.guessnumber.number.focus();
+            return false;
+       
+        }  else if (isNaN(parseInt(number)) == true) {
+            alert ("Please only enter numbers");
+            document.guessnumber.number.select();
+            return false;
+        
+        }
+          
+        if (number == 6) {
+            alert ("You Guessed Correct!");
+            return true;
+        
+        } else if (6<10) {
+            alert("Guess Higher");
+            return false;
+        
+        } else if (6<1){
+            alert("Guess lower")
+            return false;
+        }
+            
+        } 
+    
+    
+    </script>
+    
+    <form name="guessnumber" id="guessnumber" action="#" method="get" onsubmit="return yourguess();">   
+    <h1> Guess the Number!</h1>
+    <p>Insert number: <br><input type="text" name="number" id="number"></p>
+    <p> <input type="submit" name="submit" id="submit" value="Submit">
+    </p>
+   
+    
+    
+    </form>
+ 
+    
+    
+</body>
+
+</html>
