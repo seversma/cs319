@@ -9,26 +9,24 @@
     function tempConvert() {
         //alert("please enter a number");
     
-         var fahrenheit = parseFloat (document.getElementById("F").value);
+     
+     
+       
+     if (document.getElementById("go1").checked == true) {
+           var fahrenheit = parseFloat (document.getElementById("F").value);
          var celsius = (fahrenheit - 32) * (5/9);
          document.getElementById("C").value = celsius;
          document.temp.F.style.backgroundColor = "blue";
          document.temp.C.backgroundColor = "gold";
-        return false;
-          
-     
-        var celsius2 = parseFloat (document.getElementById("C").value);
-        var fahrenheit2 = (celsius * 9/5) + 32;
+       
+         
+     } else if (document.getElementById("go2").checked == true) {
+         var celsius2 = parseFloat (document.getElementById("C").value);
+        var fahrenheit2 = (celsius2 * 9/5) + 32;
         document.getElementById("F").value = fahrenheit2;
         document.temp.F.style.backgroundColor = "blue";
         document.temp.C.style.backgroundColor = "gold";
-        return false;
-            
-     if (document.getElementById("go1").checked == true); {
-         
-         
-     } else if (document.getElementById("go2").checked == true); {
-        
+       
      }
         
         
@@ -37,11 +35,7 @@
     
 </script>
     
-    
-    
-    
-    
-    </head>
+  </head>
     <body>
 
   <form name="temp" id="temp" action="#" method="get">
@@ -63,14 +57,6 @@
        </p> 
         </form>
 </body>
-
-
-
-
-
-
-
-
 
 
 
