@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Validation2</title>
+</head>
+
+    <script>
+    function formValidate() {
+        //alert("testform");
+        
+        var first = document.getElementById("first").value;
+        var last = document.getElementById("last").value;
+        var email = document.getElementById("email").value;
+        var age = document.getElementById("age").value;
+        
+    
+        first = first.trim();
+        last = last.trim();
+        email = email.trim();
+        age = age.trim();
+        
+        if (first == "") {
+            alert ("Please enter your first name.");
+            document.validation.first.focus();
+            return false;
+        
+        } else if (last == "") {
+            alert ("Please enter your last name");
+            document.validation.last.focus();
+            return false;
+        
+        } else if (email == ""){
+            alert ("Please enter your email");
+            document.validation.email.focus();
+            return false;
+       
+        } else if (email.endsWith("@uwec.edu") == false) {
+            alert ("Email is invalid");
+            email.select();
+            return false;
+       
+         } else if (age == "") {
+            alert ("Please enter your age");
+            document.validation.age.focus();
+            return false;
+        
+   
+        } else {
+            
+            return true;
+        }
+        
+      
+    }
+    
+    
+    
+    
+
+</script>
+    
+    
+    
+    <body>
+     <form name="validation" id="validation" action="https://www.mattsias.com/echo.php" method="get" onsubmit="return formValidate();">  
+         
+       <p> First Name:<input type="text" name="first" id="first"></p>
+       <p> Last Name:<input type="text" name="last" id="last"></p>
+       <p> Email Address:<input type="text" name="email" id="email"></p>
+       <p> Age:<input type="text" name="age" id="age"></p> 
+       <p><input type="submit" name="submit" id="submit" value="Submit"></p>
+       
+        </form>
+    
+    </body>
+
+
+
+
+
+</html>
