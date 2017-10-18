@@ -9,8 +9,15 @@
             
             function displayFood() {
                 
-                var firstFood; 
-                var secondFood; 
+                var firstFood = document.getElementById("ffood").value;
+                var secondFood = document.getElementById("sfood").value;
+                
+               
+                firstFood = firstFood.trim();
+                secondFood = secondFood.trim();
+                
+                firstFood = firstFood.toLowerCase();
+                secondFood = secondFood.toLowerCase();
                
               
                  alert (" Your favorite foods are: " + firstFood + " and " + secondFood + ".");
@@ -18,12 +25,7 @@
                 document.getElementById("getFood").innerHTML = " Your favorite food is: " + firstFood + " and " + secondFood + ".";
                 
             }
-        
-            
-            
-            
-            
-        </script>
+         </script>
         <form name="getFood" id="getFood" action="#" method="get">
             <p>First Favorite Food: <input type="text" name="ffood" id="ffood"></p>
             <p>Second Favorite Food: <input type="text" name="sfood" id="sfood"></p>
