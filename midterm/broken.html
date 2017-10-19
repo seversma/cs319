@@ -7,16 +7,35 @@
     <body>
         <script>
             function toCelsius() {
-                var fahrenheitTemp = parseInt(document.tempConvert.fahrenheitValue);
+                var fahrenheitTemp = parseFloat(document.tempConvert.fahrenheitValue.value);
                 var celsiusTemp = (fahrenheitTemp - 32) * (5 / 9);
-                document.tempConvert.fahrenheitValue.value = celsiusTemp;
-                document.tempConvert.fahrenheitValue.style.backgroundColor = "#e5ffe5";
+                document.tempConvert.celsiusValue.value = celsiusTemp;
+                document.tempConvert.fahrenheitValue.style.backgroundColor = "gold";
+                document.tempConvert.celsiusValue.style.backgroundColor = "blue";
+            
             }
+                
+           
+            function toFahrenheit() {
+                var celsiusTemp = parseFloat(document.tempConvert.celsiusValue.value);
+                var fahrenheitTemp = (celsiusTemp * (9/5)) + 32;
+                document.tempConvert.fahrenheitValue.value = fahrenheitTemp;
+                document.tempConvert.fahrenheitValue.style.backgroundColor = "gold";
+                document.tempConvert.celsiusValue.style.backgroundColor = "blue";
+                    
+            }
+                
+                
+            
+         
+            
+            
         </script>
         <form name="tempConvert" id="tempConvert" method="get" action="#">
-            <p>Fahrenheit: <input type="text" name="fahrenheitValue" id="fahrenheitValue"></p>
-            <p>Celsius: <input type="text" name="celsiusValue" id="celsiusValue" readonly></p>
+            <p>Fahrenheit: <input type="number" name="fahrenheitValue" id="fahrenheitValue"></p>
+            <p>Celsius: <input type="nummber" name="celsiusValue" id="celsiusValue"></p>
             <p><input type="button" name="fToC" value="F -> C" onclick="toCelsius();"></p>
+            <p><input type="button" name="cToF" value="C -> F" onclick="toFahrenheit();"></p>
         </form>
     </body>
 </html>
